@@ -3,6 +3,6 @@ const bars = document.querySelector('.bars');
 
         bars.addEventListener('click', ()=> {
         navBar.classList.toggle('active');
-        bars.classList.toggle('rotate');
+        bars.classList.toggle('rotate') ; 
 })
         
