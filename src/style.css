@@ -2,18 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body{
     min-height: 100vh;
-    background: url('./assets/back.jpg') no-repeat center;
+    background: url('./../assets/back.jpg') no-repeat center;
     background-size: cover;
 }
 header{
     width: 100%;
     min-height: 50px;
-    background: black;
+    background: #080331;
     position: relative;
 }
 
@@ -40,14 +40,14 @@ header{
 
 .logo h1 {
     color: white;
-    font-weight: 900;
     text-transform: uppercase;
+    font-size: 25px;
 }
 
 #navbar {
     float: right;
     margin-right: 100px;
-    background: black;
+    background: #080331;
 }
 
 #navbar>li{
@@ -55,16 +55,23 @@ header{
     display: inline-block;
     line-height: 50px;
 }
+#navbar>li>a{
+    border-bottom: 1px solid #080331;
+}
 
-#navbar>li:hover{
-    background-color: blue;
+#navbar>li>a:hover{
+    border-bottom: 1px solid wheat;
 }
 
 header a{
     color: white;
     text-decoration: none;
-    text-transform: uppercase;
     padding: 10px 25px;
+}
+
+.menu-one li,
+.menu-two li{
+    border-right: 1px solid black;
 }
 
 .menu-one{
@@ -89,13 +96,15 @@ header a{
 }
 
 .menu-one ul h4{
-    text-transform: uppercase;
     font-size:20px;
-    font-weight: 900;
 }
 
 .menu-one ul a{
     color: black;
+}
+
+.menu-one li {
+    padding-left: 10px;
 }
 
 .drop-two{
@@ -105,13 +114,22 @@ header a{
 .menu-two{
     position: absolute;
     list-style: none;
-    background: #555;
+    width: 100%;
+    background: rgba(60, 87, 99, 0.644);
     left: 0;
     display: none;
+    border-radius: 7px;
+}
+.menu-one li:hover{
+    background: #05131ba6;
+    color: rgb(243, 243, 243);
+    border-radius: 5px;
 }
 
 .menu-two li:hover{
-    background: rgba(206, 149, 43, 0.836);
+    background: #05131ba6;
+    color: rgb(243, 243, 243);
+    border-radius: 7px;
 }
 
 .drop-two:hover > .menu-two{
@@ -149,17 +167,34 @@ span{
     #navbar li {
         display: block;
     }
-
+    .drop-one:hover > .menu-one{
+        display: none;
+    }
     .menu-one{
         position: relative;
         box-shadow: none;
         display: none;
+        left:0;
     }
 
-    .drop-one:hover > .menu-one{
-        display: block;
+    .menu-one li,
+    .menu-two li{
+        border-right: none;
+        color: white;
+    }
+    .menu-one ul h4,
+    .menu-one ul h4 {
+        font-size: 15px;
+        border-bottom: 1px solid black;
+    }
+    .menu-one ul a,
+    .menu-one ul a {
+        color: white;
     }
 
+     .drop-two:hover > .menu-two{
+        display: none;
+    }
     .menu-one ul{
         text-align: left;
         margin-left: 10%;
@@ -167,6 +202,12 @@ span{
 
     .menu-two{
         position: relative;
+        box-shadow: none;
+        display: none;
+    }
+    .menu-two a{
+        text-align: center;
+        margin-right: -50px;
     }
 
     .bars {
@@ -175,5 +216,19 @@ span{
 
     #navbar.active{
         left: 0;
+    }
+
+    #menu-one.active-menu-one{
+        display: block;
+    }
+    .bars-menu-one.rotate{
+        transform: rotate(180deg);
+    }
+
+    #menu-two.active-menu-two{
+        display: block;
+    }
+    .bars-menu-two.rotate{
+        transform: rotate(180deg);
     }
 }
