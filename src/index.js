@@ -21,3 +21,18 @@ const menuTwo = document.querySelector('#menu-two');
         menuTwo.classList.toggle('active-menu-two');
         barsMenuTwo.classList.toggle('rotate');      
 })
+
+const navSlide = () => {
+        const burger = document.querySelector('.burger');
+        
+      
+        burger.addEventListener('click', ()=>{
+         
+      
+        //burger animation
+          burger.classList.toggle('toggle')
+        });
+      
+      }
+      
+      navSlide()
