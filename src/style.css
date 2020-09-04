@@ -76,8 +76,8 @@ header a{
 
 .menu-one{
     position: absolute;
-    max-width: 100vw;
-    right: -100%;
+    max-width: 109%;
+    left: -100%;
     background: rgba(60, 87, 99, 0.644);
     display: flex;
     justify-content: space-around;
